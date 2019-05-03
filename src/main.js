@@ -4,6 +4,11 @@ import ErrorBoundary from './Shared/components/ErrorBoundary'
 import Counter from './Counter'
 import ArtworkDashboardContainer from './ArtworkDashboard/containers/ArtworkDashboardContainer'
 
+export const CurrencyContext = React.createContext({
+  symbol: "$",
+  fullSymbol: "USD"
+})
+
 document.addEventListener('DOMContentLoaded', () => {
   const artworks = [
     { title: "Artwork 1", amount: 16.99, description: "Artwork Description 1" },
@@ -12,11 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
   ]
 
   render(
-    <ErrorBoundary>
-      <ArtworkDashboardContainer
-        artworks={ artworks }
-      />
-    </ErrorBoundary>,
+    <CurrencyContext.Provider value={ { fullSymbol: "USD" } }>
+      <ErrorBoundary>
+        <ArtworkDashboardContainer
+          artworks={ artworks }
+        />
+      </ErrorBoundary>
+    </CurrencyContext.Provider>,
     document.getElementById('artwork-mount')
   )
 })

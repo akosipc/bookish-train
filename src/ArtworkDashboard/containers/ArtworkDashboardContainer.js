@@ -8,7 +8,7 @@ export default class ArtworkDashboardContainer extends Component {
     const { artworks } = this.props
 
     return (
-      artworks.map((artwork, key) => {
+      artworks.map( (artwork, key) => {
         return (
           <ArtworkCard
             key={ key }

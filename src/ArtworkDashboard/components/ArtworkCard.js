@@ -1,17 +1,27 @@
 import React, { Component } from 'React'
 import PropTypes from 'prop-types'
 
+import { CurrencyContext } from '../../main'
+
 export default class ArtworkCard extends Component {
   render () {
     const { title, description, imageSrc, amount } = this.props
 
     return (
-      <div className='artwork'>
-        { title }
-        { description }
-        <img src={ imageSrc }/>
-        { amount }
-      </div>
+      <CurrencyContext.Consumer>
+        { (context) => (
+            <div className='artwork'>
+              { title }
+              { description }
+              <img src={ imageSrc }/>
+              <span>
+                { context.fullSymbol }
+                { amount }
+              </span>
+            </div>
+          )
+        }
+      </CurrencyContext.Consumer>
     )
   }
 }
