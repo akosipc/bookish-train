@@ -9,12 +9,20 @@ export default class Counter extends Component {
     }
   }
 
-  render () {
+  handleClick () {
     const { count } = this.state
 
+    this.setState({ count: count + 1 })
+  }
+
+  render () {
+    if (this.state.count === 3) {
+      throw new Error('Unreasonable Error')
+    }
+
     return (
-      <button onClick={ () => { this.setState({ count: count + 1 }) } } >
-        Count: { count }
+      <button onClick={ () => { this.handleClick() } } >
+        Count: { this.state.count }
       </button>
     )
   }
