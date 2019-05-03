@@ -5,8 +5,7 @@ import Counter from './Counter'
 import ArtworkDashboardContainer from './ArtworkDashboard/containers/ArtworkDashboardContainer'
 
 export const CurrencyContext = React.createContext({
-  symbol: "$",
-  fullSymbol: "USD"
+  fullSymbol: "PHP"
 })
 
 document.addEventListener('DOMContentLoaded', () => {
