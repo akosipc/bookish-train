@@ -33,5 +33,8 @@ module.exports = {
     contentBase: path.join(__dirname, 'www'),
     compress: true,
     port: 9000
+  },
+  stats: {
+    warnings: false
   }
 }
