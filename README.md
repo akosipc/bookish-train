@@ -1,6 +1,8 @@
 Todo for this React 16 tutorial
 - https://reactjs.org/docs/portals.html
 - https://reactjs.org/docs/context.html
+  - Build a notification container with ContextAPI
+  - Build a Cart
 - Autoloading in Webpack
 
 ## React Standards
@@ -13,3 +15,6 @@ This only works in the `render` function. It will not work if you have the error
 #### Use Fragments
 Roan's been having some problems with our extra divs and spans when making our components. Please use Fragments so our dear friend doesn't go insane
 - https://reactjs.org/blog/2017/11/28/react-v16.2.0-fragment-support.html
+
+#### Use ContextAPI sparringly
+ContextAPI is great and it can replace much of the State management platforms that we have like flux or redux.
