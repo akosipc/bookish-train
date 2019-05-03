@@ -6,7 +6,7 @@ import Counter from './Counter'
 document.addEventListener('DOMContentLoaded', () => {
   render(
     <ErrorBoundary>
-      <Counter/>
+      <Counter />
     </ErrorBoundary>,
     document.getElementById('mount')
   )

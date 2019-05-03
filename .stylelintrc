@@ -1,0 +1,5 @@
+{
+  "stylelintIgnore": [
+    "node_modules"
+  ]
+}

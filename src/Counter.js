@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class Counter extends Component {
   constructor () {
@@ -21,7 +21,7 @@ export default class Counter extends Component {
     }
 
     return (
-      <button onClick={ () => { this.handleClick() } } >
+      <button onClick={() => { this.handleClick() }} >
         Count: { this.state.count }
       </button>
     )

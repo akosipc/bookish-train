@@ -1,15 +1,15 @@
-const path = require("path");
-const webpack = require("webpack")
+const path = require('path')
+const webpack = require('webpack')
 
-process.env.NODE_ENV = process.env.NODE_ENV || "development"
-  
+process.env.NODE_ENV = process.env.NODE_ENV || 'development'
+
 module.exports = {
   mode: process.env.NODE_ENV,
-  context: path.join(__dirname, "src"),
+  context: path.join(__dirname, 'src'),
   entry: [
-    "./main.js"
+    './main.js'
   ],
-  output: { 
+  output: {
     path: path.join(__dirname, 'www'),
     filename: 'bundle.js'
   },
@@ -18,7 +18,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ],
-  module: { 
+  module: {
     rules: [
       {
         test: /\.js$/,
