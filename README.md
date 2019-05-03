@@ -1,5 +1,7 @@
 Todo for this React 16 tutorial
 - https://reactjs.org/docs/portals.html
+- https://reactjs.org/docs/context.html
+- Autoloading in Webpack
 
 ## React Standards
 #### In spreading state and props attributes
